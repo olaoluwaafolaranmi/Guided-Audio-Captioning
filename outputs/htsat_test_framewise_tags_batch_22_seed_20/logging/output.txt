@@ -1,0 +1,2380 @@
+ 2023-10-31 at 13:09:13 | Process on Tesla V100-SXM2-32GB
+ 2023-10-31 at 13:09:38 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-10-31 at 13:09:38 | Total numer of parameters: 171336151
+ 2023-10-31 at 13:09:38 | Size of training set: 19195, size of batches: 872
+ 2023-10-31 at 13:09:38 | Size of validation set: 1045, size of batches: 48
+ 2023-10-31 at 13:09:38 | Size of test set: 1045, size of batches: 48
+ 2023-10-31 at 13:09:38 | Training for epoch [1]
+ 2023-10-31 at 13:34:33 | Training statistics:	loss for epoch [1]: 4.631,	time: 1494.9, lr: 0.000050.
+ 2023-10-31 at 13:34:33 | Validating...
+ 2023-10-31 at 13:37:35 | Bleu_1:  0.4791
+ Bleu_4:  0.1123
+ Rouge_l:  0.3093
+ Meteor:  0.1296
+ Cider:  0.2078
+ Spice:  0.0820 
+ 2023-10-31 at 13:37:35 | Spider score :  0.1449, eval time: 182.3
+ 2023-10-31 at 13:37:58 | Training for epoch [2]
+ 2023-10-31 at 14:02:22 | Training statistics:	loss for epoch [2]: 3.840,	time: 1463.7, lr: 0.000100.
+ 2023-10-31 at 14:02:22 | Validating...
+ 2023-10-31 at 14:04:11 | Bleu_1:  0.5006
+ Bleu_4:  0.1110
+ Rouge_l:  0.3279
+ Meteor:  0.1464
+ Cider:  0.2654
+ Spice:  0.0983 
+ 2023-10-31 at 14:04:11 | Spider score :  0.1818, eval time: 108.5
+ 2023-10-31 at 14:04:17 | Training for epoch [3]
+ 2023-10-31 at 14:28:44 | Training statistics:	loss for epoch [3]: 3.623,	time: 1467.8, lr: 0.000099.
+ 2023-10-31 at 14:28:44 | Validating...
+ 2023-10-31 at 14:30:35 | Bleu_1:  0.5252
+ Bleu_4:  0.1260
+ Rouge_l:  0.3416
+ Meteor:  0.1548
+ Cider:  0.2999
+ Spice:  0.1013 
+ 2023-10-31 at 14:30:35 | Spider score :  0.2006, eval time: 111.0
+ 2023-10-31 at 14:30:42 | Training for epoch [4]
+ 2023-10-31 at 14:55:15 | Training statistics:	loss for epoch [4]: 3.417,	time: 1473.7, lr: 0.000097.
+ 2023-10-31 at 14:55:15 | Validating...
+ 2023-10-31 at 14:57:05 | Bleu_1:  0.5283
+ Bleu_4:  0.1240
+ Rouge_l:  0.3400
+ Meteor:  0.1570
+ Cider:  0.3264
+ Spice:  0.1038 
+ 2023-10-31 at 14:57:05 | Spider score :  0.2151, eval time: 109.9
+ 2023-10-31 at 14:57:15 | Training for epoch [5]
+ 2023-10-31 at 15:21:42 | Training statistics:	loss for epoch [5]: 3.258,	time: 1467.4, lr: 0.000093.
+ 2023-10-31 at 15:21:42 | Validating...
+ 2023-10-31 at 15:23:45 | Bleu_1:  0.5220
+ Bleu_4:  0.1198
+ Rouge_l:  0.3388
+ Meteor:  0.1530
+ Cider:  0.3197
+ Spice:  0.1022 
+ 2023-10-31 at 15:23:45 | Spider score :  0.2109, eval time: 123.1
+ 2023-10-31 at 15:23:48 | Training for epoch [6]
+ 2023-10-31 at 15:48:08 | Training statistics:	loss for epoch [6]: 3.113,	time: 1460.1, lr: 0.000088.
+ 2023-10-31 at 15:48:08 | Validating...
+ 2023-10-31 at 15:49:56 | Bleu_1:  0.5266
+ Bleu_4:  0.1217
+ Rouge_l:  0.3370
+ Meteor:  0.1574
+ Cider:  0.3167
+ Spice:  0.1089 
+ 2023-10-31 at 15:49:56 | Spider score :  0.2128, eval time: 108.3
+ 2023-10-31 at 15:50:18 | Training for epoch [7]
+ 2023-10-31 at 16:14:45 | Training statistics:	loss for epoch [7]: 2.969,	time: 1467.6, lr: 0.000082.
+ 2023-10-31 at 16:14:45 | Validating...
+ 2023-10-31 at 16:16:38 | Bleu_1:  0.5267
+ Bleu_4:  0.1191
+ Rouge_l:  0.3380
+ Meteor:  0.1610
+ Cider:  0.3489
+ Spice:  0.1137 
+ 2023-10-31 at 16:16:38 | Spider score :  0.2313, eval time: 113.0
+ 2023-10-31 at 16:16:44 | Training for epoch [8]
+ 2023-10-31 at 16:41:09 | Training statistics:	loss for epoch [8]: 2.848,	time: 1465.2, lr: 0.000075.
+ 2023-10-31 at 16:41:09 | Validating...
+ 2023-10-31 at 16:43:00 | Bleu_1:  0.5042
+ Bleu_4:  0.1150
+ Rouge_l:  0.3287
+ Meteor:  0.1519
+ Cider:  0.3197
+ Spice:  0.1040 
+ 2023-10-31 at 16:43:00 | Spider score :  0.2118, eval time: 110.7
+ 2023-10-31 at 16:43:03 | Training for epoch [9]
+ 2023-10-31 at 17:07:31 | Training statistics:	loss for epoch [9]: 2.703,	time: 1468.2, lr: 0.000067.
+ 2023-10-31 at 17:07:31 | Validating...
+ 2023-10-31 at 17:09:22 | Bleu_1:  0.4993
+ Bleu_4:  0.1109
+ Rouge_l:  0.3279
+ Meteor:  0.1535
+ Cider:  0.3176
+ Spice:  0.1069 
+ 2023-10-31 at 17:09:22 | Spider score :  0.2122, eval time: 111.6
+ 2023-10-31 at 17:09:43 | Training for epoch [10]
+ 2023-10-31 at 17:34:11 | Training statistics:	loss for epoch [10]: 2.581,	time: 1467.4, lr: 0.000059.
+ 2023-10-31 at 17:34:11 | Validating...
+ 2023-10-31 at 17:36:02 | Bleu_1:  0.5097
+ Bleu_4:  0.1177
+ Rouge_l:  0.3296
+ Meteor:  0.1538
+ Cider:  0.3260
+ Spice:  0.1065 
+ 2023-10-31 at 17:36:02 | Spider score :  0.2163, eval time: 111.4
+ 2023-10-31 at 17:36:05 | Training for epoch [11]
+ 2023-10-31 at 18:01:34 | Training statistics:	loss for epoch [11]: 2.476,	time: 1529.3, lr: 0.000050.
+ 2023-10-31 at 18:01:34 | Validating...
+ 2023-10-31 at 18:03:25 | Bleu_1:  0.4810
+ Bleu_4:  0.0999
+ Rouge_l:  0.3202
+ Meteor:  0.1493
+ Cider:  0.2923
+ Spice:  0.1022 
+ 2023-10-31 at 18:03:25 | Spider score :  0.1972, eval time: 110.9
+ 2023-10-31 at 18:03:36 | Training for epoch [12]
+ 2023-10-31 at 18:28:30 | Training statistics:	loss for epoch [12]: 2.372,	time: 1493.5, lr: 0.000041.
+ 2023-10-31 at 18:28:30 | Validating...
+ 2023-10-31 at 18:30:18 | Bleu_1:  0.4714
+ Bleu_4:  0.0945
+ Rouge_l:  0.3094
+ Meteor:  0.1447
+ Cider:  0.2878
+ Spice:  0.0983 
+ 2023-10-31 at 18:30:18 | Spider score :  0.1931, eval time: 107.9
+ 2023-10-31 at 18:30:21 | Training for epoch [13]
+ 2023-10-31 at 18:54:45 | Training statistics:	loss for epoch [13]: 2.287,	time: 1464.8, lr: 0.000033.
+ 2023-10-31 at 18:54:45 | Validating...
+ 2023-10-31 at 18:56:33 | Bleu_1:  0.4657
+ Bleu_4:  0.0879
+ Rouge_l:  0.3082
+ Meteor:  0.1441
+ Cider:  0.2745
+ Spice:  0.0973 
+ 2023-10-31 at 18:56:33 | Spider score :  0.1859, eval time: 107.7
+ 2023-10-31 at 18:56:51 | Training for epoch [14]
+ 2023-10-31 at 19:21:17 | Training statistics:	loss for epoch [14]: 2.211,	time: 1466.1, lr: 0.000025.
+ 2023-10-31 at 19:21:17 | Validating...
+ 2023-10-31 at 19:23:08 | Bleu_1:  0.4562
+ Bleu_4:  0.0832
+ Rouge_l:  0.3045
+ Meteor:  0.1432
+ Cider:  0.2746
+ Spice:  0.0976 
+ 2023-10-31 at 19:23:08 | Spider score :  0.1861, eval time: 111.1
+ 2023-10-31 at 19:23:14 | Training for epoch [15]
+ 2023-10-31 at 19:47:39 | Training statistics:	loss for epoch [15]: 2.148,	time: 1464.7, lr: 0.000018.
+ 2023-10-31 at 19:47:39 | Validating...
+ 2023-10-31 at 19:49:29 | Bleu_1:  0.4466
+ Bleu_4:  0.0866
+ Rouge_l:  0.2971
+ Meteor:  0.1407
+ Cider:  0.2670
+ Spice:  0.0962 
+ 2023-10-31 at 19:49:29 | Spider score :  0.1816, eval time: 110.1
+ 2023-10-31 at 19:49:46 | Training for epoch [16]
+ 2023-10-31 at 20:14:57 | Training statistics:	loss for epoch [16]: 2.097,	time: 1511.1, lr: 0.000012.
+ 2023-10-31 at 20:14:57 | Validating...
+ 2023-10-31 at 20:16:54 | Bleu_1:  0.4503
+ Bleu_4:  0.0808
+ Rouge_l:  0.2983
+ Meteor:  0.1425
+ Cider:  0.2632
+ Spice:  0.0984 
+ 2023-10-31 at 20:16:54 | Spider score :  0.1808, eval time: 116.7
+ 2023-10-31 at 20:17:01 | Training for epoch [17]
+ 2023-10-31 at 20:42:34 | Training statistics:	loss for epoch [17]: 2.059,	time: 1534.0, lr: 0.000007.
+ 2023-10-31 at 20:42:35 | Validating...
+ 2023-10-31 at 20:44:51 | Bleu_1:  0.4550
+ Bleu_4:  0.0859
+ Rouge_l:  0.3020
+ Meteor:  0.1434
+ Cider:  0.2622
+ Spice:  0.0982 
+ 2023-10-31 at 20:44:51 | Spider score :  0.1802, eval time: 136.2
+ 2023-10-31 at 20:45:12 | Training for epoch [18]
+ 2023-10-31 at 21:10:38 | Training statistics:	loss for epoch [18]: 2.031,	time: 1525.8, lr: 0.000003.
+ 2023-10-31 at 21:10:38 | Validating...
+ 2023-10-31 at 21:12:38 | Bleu_1:  0.4435
+ Bleu_4:  0.0785
+ Rouge_l:  0.2968
+ Meteor:  0.1401
+ Cider:  0.2549
+ Spice:  0.0974 
+ 2023-10-31 at 21:12:38 | Spider score :  0.1762, eval time: 119.6
+ 2023-10-31 at 21:13:00 | Training for epoch [19]
+ 2023-10-31 at 21:38:20 | Training statistics:	loss for epoch [19]: 2.015,	time: 1520.2, lr: 0.000001.
+ 2023-10-31 at 21:38:20 | Validating...
+ 2023-10-31 at 21:40:21 | Bleu_1:  0.4406
+ Bleu_4:  0.0789
+ Rouge_l:  0.2933
+ Meteor:  0.1388
+ Cider:  0.2444
+ Spice:  0.0951 
+ 2023-10-31 at 21:40:21 | Spider score :  0.1698, eval time: 120.6
+ 2023-10-31 at 21:40:38 | Training for epoch [20]
+ 2023-10-31 at 22:06:04 | Training statistics:	loss for epoch [20]: 2.009,	time: 1526.1, lr: 0.000000.
+ 2023-10-31 at 22:06:04 | Validating...
+ 2023-10-31 at 22:08:13 | Bleu_1:  0.4425
+ Bleu_4:  0.0779
+ Rouge_l:  0.2970
+ Meteor:  0.1411
+ Cider:  0.2520
+ Spice:  0.0967 
+ 2023-10-31 at 22:08:13 | Spider score :  0.1743, eval time: 128.9
+ 2023-10-31 at 22:08:32 | Training done. Start evaluating.
+ 2023-10-31 at 22:08:41 | Best checkpoint occurred in 7 th epoch.
+ 2023-10-31 at 22:10:37 | Bleu_1:  0.5345
+ Bleu_4:  0.1245
+ Rouge_l:  0.3530
+ Meteor:  0.1662
+ Cider:  0.3466
+ Spice:  0.1149 
+ 2023-10-31 at 22:10:37 | Spider score :  0.2308, eval time: 115.9
+ 2023-10-31 at 22:10:45 | Evaluation done.
+ 2023-11-09 at 10:56:13 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 10:56:55 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 10:56:55 | Total numer of parameters: 171336151
+ 2023-11-09 at 10:56:55 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 10:56:55 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 10:56:55 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 10:56:55 | Training for epoch [1]
+ 2023-11-09 at 11:07:24 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 11:07:51 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 11:07:51 | Total numer of parameters: 171336151
+ 2023-11-09 at 11:07:51 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 11:07:51 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 11:07:51 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 11:07:51 | Training for epoch [1]
+ 2023-11-09 at 11:15:44 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 11:16:27 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 11:16:27 | Total numer of parameters: 171336151
+ 2023-11-09 at 11:16:27 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 11:16:27 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 11:16:27 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 11:16:27 | Training for epoch [1]
+ 2023-11-09 at 11:35:28 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 11:36:11 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 11:36:11 | Total numer of parameters: 171336151
+ 2023-11-09 at 11:36:12 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 11:36:12 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 11:36:12 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 11:36:12 | Training for epoch [1]
+ 2023-11-09 at 13:43:45 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 13:44:25 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 13:44:25 | Total numer of parameters: 171336151
+ 2023-11-09 at 13:44:25 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 13:44:25 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 13:44:25 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 13:44:25 | Training for epoch [1]
+ 2023-11-09 at 13:48:10 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 13:48:51 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 13:48:51 | Total numer of parameters: 171336151
+ 2023-11-09 at 13:48:51 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 13:48:51 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 13:48:51 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 13:48:51 | Training for epoch [1]
+ 2023-11-09 at 14:02:44 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 14:03:28 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 14:03:28 | Total numer of parameters: 171336151
+ 2023-11-09 at 14:03:29 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 14:03:29 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 14:03:29 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 14:03:29 | Training for epoch [1]
+ 2023-11-09 at 14:28:36 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 14:29:21 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 14:29:21 | Total numer of parameters: 171336151
+ 2023-11-09 at 14:29:22 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 14:29:22 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 14:29:22 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 14:29:22 | Training for epoch [1]
+ 2023-11-09 at 14:35:21 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 14:36:03 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 14:36:03 | Total numer of parameters: 171336151
+ 2023-11-09 at 14:36:03 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 14:36:03 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 14:36:03 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 14:36:03 | Training for epoch [1]
+ 2023-11-09 at 14:48:37 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 14:49:17 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 14:49:17 | Total numer of parameters: 171336151
+ 2023-11-09 at 14:49:17 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 14:49:17 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 14:49:17 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 14:49:17 | Training for epoch [1]
+ 2023-11-09 at 15:10:11 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 15:10:50 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 15:10:50 | Total numer of parameters: 171336151
+ 2023-11-09 at 15:10:51 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 15:10:51 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 15:10:51 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 15:10:51 | Training for epoch [1]
+ 2023-11-09 at 15:27:28 | Process on Tesla V100-SXM2-32GB
+ 2023-11-09 at 15:28:09 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-09 at 15:28:09 | Total numer of parameters: 171336151
+ 2023-11-09 at 15:28:09 | Size of training set: 19195, size of batches: 872
+ 2023-11-09 at 15:28:09 | Size of validation set: 1045, size of batches: 48
+ 2023-11-09 at 15:28:09 | Size of test set: 1045, size of batches: 48
+ 2023-11-09 at 15:28:09 | Training for epoch [1]
+ 2023-11-13 at 09:59:04 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 10:00:24 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 10:00:24 | Total numer of parameters: 171336151
+ 2023-11-13 at 10:00:24 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 10:00:24 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 10:00:24 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 10:00:24 | Training for epoch [1]
+ 2023-11-13 at 10:03:41 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 10:05:33 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 10:05:33 | Total numer of parameters: 171336151
+ 2023-11-13 at 10:05:34 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 10:05:34 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 10:05:34 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 10:05:34 | Training for epoch [1]
+ 2023-11-13 at 12:05:05 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 12:06:07 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 12:06:07 | Total numer of parameters: 171336151
+ 2023-11-13 at 12:06:07 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 12:06:07 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 12:06:07 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 12:06:07 | Training for epoch [1]
+ 2023-11-13 at 12:10:54 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 12:11:53 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 12:11:53 | Total numer of parameters: 171336151
+ 2023-11-13 at 12:11:54 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 12:11:54 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 12:11:54 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 12:11:54 | Training for epoch [1]
+ 2023-11-13 at 12:20:14 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 12:21:18 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 12:21:18 | Total numer of parameters: 171336151
+ 2023-11-13 at 12:21:18 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 12:21:18 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 12:21:18 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 12:21:18 | Training for epoch [1]
+ 2023-11-13 at 12:38:15 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 12:39:53 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 12:39:53 | Total numer of parameters: 171336151
+ 2023-11-13 at 12:39:53 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 12:39:53 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 12:39:53 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 12:39:53 | Training for epoch [1]
+ 2023-11-13 at 12:45:58 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 12:49:43 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 12:49:43 | Total numer of parameters: 171336151
+ 2023-11-13 at 12:49:43 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 12:49:43 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 12:49:43 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 12:49:43 | Training for epoch [1]
+ 2023-11-13 at 12:56:27 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 12:59:18 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 12:59:18 | Total numer of parameters: 171336151
+ 2023-11-13 at 12:59:18 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 12:59:18 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 12:59:18 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 12:59:18 | Training for epoch [1]
+ 2023-11-13 at 13:03:21 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 13:05:47 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 13:05:47 | Total numer of parameters: 171336151
+ 2023-11-13 at 13:05:47 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 13:05:47 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 13:05:47 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 13:05:47 | Training for epoch [1]
+ 2023-11-13 at 13:09:54 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 13:11:07 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 13:11:07 | Total numer of parameters: 171336151
+ 2023-11-13 at 13:11:07 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 13:11:07 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 13:11:07 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 13:11:07 | Training for epoch [1]
+ 2023-11-13 at 13:14:18 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 13:15:06 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 13:15:06 | Total numer of parameters: 171336151
+ 2023-11-13 at 13:15:06 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 13:15:06 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 13:15:06 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 13:15:06 | Training for epoch [1]
+ 2023-11-13 at 13:21:42 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 13:22:24 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 13:22:24 | Total numer of parameters: 171336151
+ 2023-11-13 at 13:22:24 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 13:22:24 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 13:22:24 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 13:22:24 | Training for epoch [1]
+ 2023-11-13 at 13:26:08 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 13:26:56 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 13:26:56 | Total numer of parameters: 171336151
+ 2023-11-13 at 13:26:57 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 13:26:57 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 13:26:57 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 13:26:57 | Training for epoch [1]
+ 2023-11-13 at 13:32:34 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 13:33:18 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 13:33:18 | Total numer of parameters: 171336151
+ 2023-11-13 at 13:33:18 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 13:33:18 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 13:33:18 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 13:33:18 | Training for epoch [1]
+ 2023-11-13 at 13:37:15 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 13:37:57 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 13:37:57 | Total numer of parameters: 171336151
+ 2023-11-13 at 13:37:57 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 13:37:57 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 13:37:57 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 13:37:57 | Training for epoch [1]
+ 2023-11-13 at 14:16:41 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 14:17:24 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 14:17:24 | Total numer of parameters: 171336151
+ 2023-11-13 at 14:17:25 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 14:17:25 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 14:17:25 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 14:17:25 | Training for epoch [1]
+ 2023-11-13 at 14:44:50 | Training statistics:	loss for epoch [1]: 4.614,	time: 1645.7, lr: 0.000050.
+ 2023-11-13 at 14:44:50 | Validating...
+ 2023-11-13 at 18:17:08 | Process on Tesla V100-SXM2-32GB
+ 2023-11-13 at 18:17:56 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-13 at 18:17:56 | Total numer of parameters: 171336151
+ 2023-11-13 at 18:17:56 | Size of training set: 19195, size of batches: 872
+ 2023-11-13 at 18:17:56 | Size of validation set: 1045, size of batches: 48
+ 2023-11-13 at 18:17:56 | Size of test set: 1045, size of batches: 48
+ 2023-11-13 at 18:17:56 | Training for epoch [1]
+ 2023-11-13 at 18:46:24 | Training statistics:	loss for epoch [1]: 4.614,	time: 1707.9, lr: 0.000050.
+ 2023-11-13 at 18:46:24 | Validating...
+ 2023-11-13 at 18:48:27 | Bleu_1:  0.4718
+ Bleu_4:  0.1104
+ Rouge_l:  0.3216
+ Meteor:  0.1323
+ Cider:  0.2037
+ Spice:  0.0809 
+ 2023-11-13 at 18:48:27 | Spider score :  0.1423, eval time: 123.2
+ 2023-11-13 at 18:49:15 | Training for epoch [2]
+ 2023-11-13 at 19:17:40 | Training statistics:	loss for epoch [2]: 3.984,	time: 1704.6, lr: 0.000100.
+ 2023-11-13 at 19:17:40 | Validating...
+ 2023-11-13 at 19:19:45 | Bleu_1:  0.3713
+ Bleu_4:  0.0555
+ Rouge_l:  0.2574
+ Meteor:  0.0919
+ Cider:  0.0832
+ Spice:  0.0372 
+ 2023-11-13 at 19:19:45 | Spider score :  0.0602, eval time: 125.4
+ 2023-11-13 at 19:20:31 | Training for epoch [3]
+ 2023-11-13 at 19:48:40 | Training statistics:	loss for epoch [3]: 3.686,	time: 1688.3, lr: 0.000099.
+ 2023-11-13 at 19:48:40 | Validating...
+ 2023-11-13 at 19:50:43 | Bleu_1:  0.3456
+ Bleu_4:  0.0309
+ Rouge_l:  0.2220
+ Meteor:  0.0775
+ Cider:  0.0605
+ Spice:  0.0184 
+ 2023-11-13 at 19:50:43 | Spider score :  0.0395, eval time: 123.3
+ 2023-11-13 at 19:51:13 | Training for epoch [4]
+ 2023-11-13 at 20:19:34 | Training statistics:	loss for epoch [4]: 3.473,	time: 1700.1, lr: 0.000097.
+ 2023-11-13 at 20:19:34 | Validating...
+ 2023-11-13 at 20:21:39 | Bleu_1:  0.3430
+ Bleu_4:  0.0287
+ Rouge_l:  0.2352
+ Meteor:  0.0821
+ Cider:  0.0401
+ Spice:  0.0276 
+ 2023-11-13 at 20:21:39 | Spider score :  0.0339, eval time: 125.3
+ 2023-11-13 at 20:21:57 | Training for epoch [5]
+ 2023-11-13 at 20:50:14 | Training statistics:	loss for epoch [5]: 3.309,	time: 1697.9, lr: 0.000093.
+ 2023-11-13 at 20:50:15 | Validating...
+ 2023-11-13 at 20:52:19 | Bleu_1:  0.3395
+ Bleu_4:  0.0364
+ Rouge_l:  0.2489
+ Meteor:  0.0801
+ Cider:  0.0369
+ Spice:  0.0326 
+ 2023-11-13 at 20:52:19 | Spider score :  0.0348, eval time: 124.9
+ 2023-11-13 at 20:52:44 | Training for epoch [6]
+ 2023-11-13 at 21:20:49 | Training statistics:	loss for epoch [6]: 3.164,	time: 1685.1, lr: 0.000088.
+ 2023-11-13 at 21:20:49 | Validating...
+ 2023-11-13 at 21:22:56 | Bleu_1:  0.3944
+ Bleu_4:  0.0358
+ Rouge_l:  0.2370
+ Meteor:  0.0839
+ Cider:  0.0453
+ Spice:  0.0311 
+ 2023-11-13 at 21:22:56 | Spider score :  0.0382, eval time: 126.5
+ 2023-11-13 at 21:23:12 | Training for epoch [7]
+ 2023-11-13 at 21:51:18 | Training statistics:	loss for epoch [7]: 3.024,	time: 1686.7, lr: 0.000082.
+ 2023-11-13 at 21:51:18 | Validating...
+ 2023-11-13 at 21:53:15 | Bleu_1:  0.3692
+ Bleu_4:  0.0139
+ Rouge_l:  0.2463
+ Meteor:  0.0892
+ Cider:  0.0353
+ Spice:  0.0233 
+ 2023-11-13 at 21:53:15 | Spider score :  0.0293, eval time: 117.1
+ 2023-11-13 at 21:53:37 | Training for epoch [8]
+ 2023-11-13 at 22:21:38 | Training statistics:	loss for epoch [8]: 2.888,	time: 1681.2, lr: 0.000075.
+ 2023-11-13 at 22:21:38 | Validating...
+ 2023-11-13 at 22:23:50 | Bleu_1:  0.3239
+ Bleu_4:  0.0199
+ Rouge_l:  0.2446
+ Meteor:  0.0837
+ Cider:  0.0218
+ Spice:  0.0247 
+ 2023-11-13 at 22:23:50 | Spider score :  0.0233, eval time: 131.6
+ 2023-11-13 at 22:24:03 | Training for epoch [9]
+ 2023-11-13 at 22:52:21 | Training statistics:	loss for epoch [9]: 2.753,	time: 1698.1, lr: 0.000067.
+ 2023-11-13 at 22:52:21 | Validating...
+ 2023-11-13 at 22:54:28 | Bleu_1:  0.3089
+ Bleu_4:  0.0267
+ Rouge_l:  0.2294
+ Meteor:  0.0835
+ Cider:  0.0445
+ Spice:  0.0366 
+ 2023-11-13 at 22:54:28 | Spider score :  0.0406, eval time: 127.3
+ 2023-11-13 at 22:54:45 | Training for epoch [10]
+ 2023-11-13 at 23:22:52 | Training statistics:	loss for epoch [10]: 2.638,	time: 1687.3, lr: 0.000059.
+ 2023-11-13 at 23:22:52 | Validating...
+ 2023-11-13 at 23:24:57 | Bleu_1:  0.3324
+ Bleu_4:  0.0209
+ Rouge_l:  0.2361
+ Meteor:  0.0957
+ Cider:  0.0374
+ Spice:  0.0373 
+ 2023-11-13 at 23:24:57 | Spider score :  0.0374, eval time: 124.2
+ 2023-11-13 at 23:25:15 | Training for epoch [11]
+ 2023-11-13 at 23:53:21 | Training statistics:	loss for epoch [11]: 2.517,	time: 1685.3, lr: 0.000050.
+ 2023-11-13 at 23:53:21 | Validating...
+ 2023-11-13 at 23:55:35 | Bleu_1:  0.2449
+ Bleu_4:  0.0116
+ Rouge_l:  0.1868
+ Meteor:  0.0703
+ Cider:  0.0287
+ Spice:  0.0043 
+ 2023-11-13 at 23:55:35 | Spider score :  0.0165, eval time: 134.6
+ 2023-11-13 at 23:55:55 | Training for epoch [12]
+ 2023-11-14 at 00:24:19 | Training statistics:	loss for epoch [12]: 2.426,	time: 1703.3, lr: 0.000041.
+ 2023-11-14 at 00:24:19 | Validating...
+ 2023-11-14 at 00:26:25 | Bleu_1:  0.2351
+ Bleu_4:  0.0085
+ Rouge_l:  0.1761
+ Meteor:  0.0635
+ Cider:  0.0278
+ Spice:  0.0042 
+ 2023-11-14 at 00:26:25 | Spider score :  0.0160, eval time: 125.9
+ 2023-11-14 at 00:26:47 | Training for epoch [13]
+ 2023-11-14 at 00:54:57 | Training statistics:	loss for epoch [13]: 2.333,	time: 1690.6, lr: 0.000033.
+ 2023-11-14 at 00:54:57 | Validating...
+ 2023-11-14 at 00:57:02 | Bleu_1:  0.2348
+ Bleu_4:  0.0085
+ Rouge_l:  0.1760
+ Meteor:  0.0634
+ Cider:  0.0280
+ Spice:  0.0042 
+ 2023-11-14 at 00:57:02 | Spider score :  0.0161, eval time: 124.6
+ 2023-11-14 at 00:57:24 | Training for epoch [14]
+ 2023-11-14 at 01:25:28 | Training statistics:	loss for epoch [14]: 2.258,	time: 1685.0, lr: 0.000025.
+ 2023-11-14 at 01:25:29 | Validating...
+ 2023-11-14 at 01:27:29 | Bleu_1:  0.2348
+ Bleu_4:  0.0086
+ Rouge_l:  0.1761
+ Meteor:  0.0633
+ Cider:  0.0277
+ Spice:  0.0042 
+ 2023-11-14 at 01:27:29 | Spider score :  0.0160, eval time: 120.8
+ 2023-11-14 at 01:27:46 | Training for epoch [15]
+ 2023-11-14 at 01:55:53 | Training statistics:	loss for epoch [15]: 2.195,	time: 1686.2, lr: 0.000018.
+ 2023-11-14 at 01:55:53 | Validating...
+ 2023-11-14 at 01:57:52 | Bleu_1:  0.2454
+ Bleu_4:  0.0102
+ Rouge_l:  0.1802
+ Meteor:  0.0665
+ Cider:  0.0283
+ Spice:  0.0131 
+ 2023-11-14 at 01:57:52 | Spider score :  0.0207, eval time: 119.9
+ 2023-11-14 at 01:58:11 | Training for epoch [16]
+ 2023-11-14 at 02:25:01 | Training statistics:	loss for epoch [16]: 2.143,	time: 1610.0, lr: 0.000012.
+ 2023-11-14 at 02:25:01 | Validating...
+ 2023-11-14 at 02:26:53 | Bleu_1:  0.2345
+ Bleu_4:  0.0085
+ Rouge_l:  0.1759
+ Meteor:  0.0633
+ Cider:  0.0277
+ Spice:  0.0041 
+ 2023-11-14 at 02:26:53 | Spider score :  0.0159, eval time: 112.2
+ 2023-11-14 at 02:27:10 | Training for epoch [17]
+ 2023-11-14 at 02:55:21 | Training statistics:	loss for epoch [17]: 2.103,	time: 1691.3, lr: 0.000007.
+ 2023-11-14 at 02:55:21 | Validating...
+ 2023-11-14 at 02:57:20 | Bleu_1:  0.2345
+ Bleu_4:  0.0085
+ Rouge_l:  0.1759
+ Meteor:  0.0633
+ Cider:  0.0277
+ Spice:  0.0041 
+ 2023-11-14 at 02:57:20 | Spider score :  0.0159, eval time: 118.8
+ 2023-11-14 at 02:57:40 | Training for epoch [18]
+ 2023-11-14 at 03:24:25 | Training statistics:	loss for epoch [18]: 2.074,	time: 1605.0, lr: 0.000003.
+ 2023-11-14 at 03:24:25 | Validating...
+ 2023-11-14 at 03:26:19 | Bleu_1:  0.2347
+ Bleu_4:  0.0085
+ Rouge_l:  0.1759
+ Meteor:  0.0633
+ Cider:  0.0277
+ Spice:  0.0041 
+ 2023-11-14 at 03:26:19 | Spider score :  0.0159, eval time: 113.3
+ 2023-11-14 at 03:26:36 | Training for epoch [19]
+ 2023-11-14 at 03:54:32 | Training statistics:	loss for epoch [19]: 2.055,	time: 1675.9, lr: 0.000001.
+ 2023-11-14 at 03:54:32 | Validating...
+ 2023-11-14 at 03:56:29 | Bleu_1:  0.2349
+ Bleu_4:  0.0085
+ Rouge_l:  0.1760
+ Meteor:  0.0634
+ Cider:  0.0278
+ Spice:  0.0043 
+ 2023-11-14 at 03:56:29 | Spider score :  0.0160, eval time: 116.7
+ 2023-11-14 at 03:56:46 | Training for epoch [20]
+ 2023-11-14 at 04:23:32 | Training statistics:	loss for epoch [20]: 2.048,	time: 1605.3, lr: 0.000000.
+ 2023-11-14 at 04:23:32 | Validating...
+ 2023-11-14 at 04:25:26 | Bleu_1:  0.2346
+ Bleu_4:  0.0085
+ Rouge_l:  0.1759
+ Meteor:  0.0632
+ Cider:  0.0276
+ Spice:  0.0041 
+ 2023-11-14 at 04:25:26 | Spider score :  0.0158, eval time: 114.6
+ 2023-11-14 at 04:25:44 | Training done. Start evaluating.
+ 2023-11-14 at 04:25:52 | Best checkpoint occurred in 1 th epoch.
+ 2023-11-14 at 04:27:49 | Bleu_1:  0.4762
+ Bleu_4:  0.1271
+ Rouge_l:  0.3370
+ Meteor:  0.1353
+ Cider:  0.2388
+ Spice:  0.0829 
+ 2023-11-14 at 04:27:49 | Spider score :  0.1609, eval time: 117.1
+ 2023-11-14 at 04:27:52 | Evaluation done.
+ 2023-11-14 at 10:17:21 | Process on Tesla V100-SXM2-32GB
+ 2023-11-14 at 10:18:10 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-14 at 10:18:10 | Total numer of parameters: 171336151
+ 2023-11-14 at 10:18:11 | Size of training set: 19195, size of batches: 872
+ 2023-11-14 at 10:18:11 | Size of validation set: 1045, size of batches: 48
+ 2023-11-14 at 10:18:11 | Size of test set: 1045, size of batches: 48
+ 2023-11-14 at 10:18:11 | Training for epoch [1]
+ 2023-11-14 at 10:52:19 | Process on Tesla V100-SXM2-32GB
+ 2023-11-14 at 10:53:22 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-14 at 10:53:22 | Total numer of parameters: 171336151
+ 2023-11-14 at 10:53:22 | Size of training set: 19195, size of batches: 872
+ 2023-11-14 at 10:53:22 | Size of validation set: 1045, size of batches: 48
+ 2023-11-14 at 10:53:22 | Size of test set: 1045, size of batches: 48
+ 2023-11-14 at 10:53:22 | Training for epoch [1]
+ 2023-11-15 at 14:24:18 | Process on Tesla V100-SXM2-32GB
+ 2023-11-15 at 14:25:02 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-15 at 14:25:02 | Total numer of parameters: 171336151
+ 2023-11-15 at 14:25:02 | Size of training set: 19195, size of batches: 872
+ 2023-11-15 at 14:25:02 | Size of validation set: 1045, size of batches: 48
+ 2023-11-15 at 14:25:02 | Size of test set: 1045, size of batches: 48
+ 2023-11-15 at 14:25:02 | Training for epoch [1]
+ 2023-11-15 at 14:38:35 | Process on Tesla V100-SXM2-32GB
+ 2023-11-15 at 14:39:16 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-15 at 14:39:16 | Total numer of parameters: 171336151
+ 2023-11-15 at 14:39:16 | Size of training set: 19195, size of batches: 872
+ 2023-11-15 at 14:39:16 | Size of validation set: 1045, size of batches: 48
+ 2023-11-15 at 14:39:16 | Size of test set: 1045, size of batches: 48
+ 2023-11-15 at 14:39:16 | Training for epoch [1]
+ 2023-11-16 at 10:22:37 | Process on Tesla V100-SXM2-32GB
+ 2023-11-16 at 10:23:33 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 22, 'dataset': 'Clotho', 'num_workers': 8},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'text_decoder_args': {'bart_args': {'add_cross_attention': True,
+                                     'add_type_embeddings': False,
+                                     'attention_probs_dropout_prob': 0.2,
+                                     'hidden_act': 'gelu',
+                                     'hidden_dropout_prob': 0.2,
+                                     'hidden_size': 768,
+                                     'initializer_range': 0.02,
+                                     'intermediate_size': 2048,
+                                     'is_decoder': True,
+                                     'layer_norm_eps': 1e-05,
+                                     'max_position_embeddings': 128,
+                                     'model_type': 'bart',
+                                     'name': 'bart-base-uncased',
+                                     'num_attention_heads': 4,
+                                     'num_hidden_layers': 2,
+                                     'num_labels': 0,
+                                     'vocab_size': 30522},
+                       'name': 'facebook/bart-base',
+                       'pretrained': True},
+ 'training': {'clip_grad': 2, 'dropout': 0.2, 'epochs': 20}}
+ 2023-11-16 at 10:23:33 | Total numer of parameters: 171336151
+ 2023-11-16 at 10:23:33 | Size of training set: 19195, size of batches: 872
+ 2023-11-16 at 10:23:33 | Size of validation set: 1045, size of batches: 48
+ 2023-11-16 at 10:23:33 | Size of test set: 1045, size of batches: 48
+ 2023-11-16 at 10:23:33 | Training for epoch [1]

@@ -1,0 +1,163 @@
+ 2023-12-11 at 11:35:06 | Process on Tesla V100-SXM2-32GB
+ 2023-12-11 at 11:35:32 | Training setting:
+{'audio_args': {'f_max': 14000,
+                'f_min': 50,
+                'hop_length': 320,
+                'max_length': 10,
+                'mono': True,
+                'n_fft': 1024,
+                'n_mels': 64,
+                'sr': 32000},
+ 'audio_encoder_args': {'freeze': False,
+                        'model_arch': 'transformer',
+                        'model_name': 'htsat',
+                        'pretrained': True,
+                        'spec_augment': True},
+ 'data_args': {'batch_size': 16, 'dataset': 'Clotho', 'num_workers': 4},
+ 'decoder': {'activation': 'gelu',
+             'decoder_only': 'Yes',
+             'dim_feedforward': 2048,
+             'dropout': 0.2,
+             'nhead': 4,
+             'nhid': 768,
+             'nlayers': 2},
+ 'device': 'cuda',
+ 'exp_name': 'htsat_test_guide',
+ 'keywords': 'Yes',
+ 'optim_args': {'betas': [0.9, 0.999],
+                'eps': 1e-08,
+                'gamma': 0.1,
+                'lr': 0.0001,
+                'momentum': 0.9,
+                'optimizer_name': 'adam',
+                'step_epochs': 10,
+                'warmup_epochs': 2,
+                'warmup_steps': 6400,
+                'weight_decay': 1e-06},
+ 'path': {'encoder': 'pretrained_models/audio_encoder/',
+          'model': '',
+          'vocabulary': 'data/Clotho/vocab/clotho_vocab.json',
+          'word2vec': 'pretrained_models/word2vec/w2vclotho.model'},
+ 'pretrain': False,
+ 'pretrain_path': 'None',
+ 'seed': 20,
+ 'sos_token': 'Yes',
+ 'training': {'clip_grad': 2,
+              'dropout': 0.2,
+              'epochs': 10,
+              'label_smoothing': 'Yes'},
+ 'word_embedding': {'freeze': 'Yes', 'pretrained': 'Yes'}}
+ 2023-12-11 at 11:35:32 | Total numer of parameters: 54385127
+ 2023-12-11 at 11:35:32 | Size of training set: 19195, size of batches: 1199
+ 2023-12-11 at 11:35:32 | Size of validation set: 1045, size of batches: 66
+ 2023-12-11 at 11:35:32 | Size of test set: 1045, size of batches: 66
+ 2023-12-11 at 11:35:32 | Training for epoch [1]
+ 2023-12-11 at 12:31:37 | Training statistics:	loss for epoch [1]: 4.722,	time: 3364.8, lr: 0.000050.
+ 2023-12-11 at 12:31:37 | Validating...
+ 2023-12-11 at 12:38:04 | Bleu_1:  0.4981
+ Bleu_4:  0.1233
+ Rouge_l:  0.3425
+ Meteor:  0.1441
+ Cider:  0.2296
+ Spice:  0.1007 
+ 2023-12-11 at 12:38:04 | Spider score :  0.1651, eval time: 387.4
+ 2023-12-11 at 12:38:58 | Training for epoch [2]
+ 2023-12-11 at 13:27:51 | Training statistics:	loss for epoch [2]: 3.576,	time: 2932.8, lr: 0.000100.
+ 2023-12-11 at 13:27:51 | Validating...
+ 2023-12-11 at 13:32:53 | Bleu_1:  0.5950
+ Bleu_4:  0.1913
+ Rouge_l:  0.4022
+ Meteor:  0.1828
+ Cider:  0.4604
+ Spice:  0.1363 
+ 2023-12-11 at 13:32:53 | Spider score :  0.2984, eval time: 301.8
+ 2023-12-11 at 13:33:01 | Training for epoch [3]
+ 2023-12-11 at 14:20:04 | Training statistics:	loss for epoch [3]: 3.261,	time: 2823.2, lr: 0.000096.
+ 2023-12-11 at 14:20:04 | Validating...
+ 2023-12-11 at 14:25:13 | Bleu_1:  0.6062
+ Bleu_4:  0.2159
+ Rouge_l:  0.4213
+ Meteor:  0.1948
+ Cider:  0.5733
+ Spice:  0.1494 
+ 2023-12-11 at 14:25:13 | Spider score :  0.3614, eval time: 308.5
+ 2023-12-11 at 14:25:31 | Training for epoch [4]
+ 2023-12-11 at 15:12:39 | Training statistics:	loss for epoch [4]: 3.059,	time: 2827.5, lr: 0.000085.
+ 2023-12-11 at 15:12:39 | Validating...
+ 2023-12-11 at 15:17:36 | Bleu_1:  0.6480
+ Bleu_4:  0.2395
+ Rouge_l:  0.4468
+ Meteor:  0.2115
+ Cider:  0.6687
+ Spice:  0.1607 
+ 2023-12-11 at 15:17:36 | Spider score :  0.4147, eval time: 297.3
+ 2023-12-11 at 15:17:41 | Training for epoch [5]
+ 2023-12-11 at 16:08:19 | Training statistics:	loss for epoch [5]: 2.923,	time: 3038.1, lr: 0.000069.
+ 2023-12-11 at 16:08:19 | Validating...
+ 2023-12-11 at 16:17:24 | Bleu_1:  0.6680
+ Bleu_4:  0.2524
+ Rouge_l:  0.4517
+ Meteor:  0.2213
+ Cider:  0.7315
+ Spice:  0.1717 
+ 2023-12-11 at 16:17:24 | Spider score :  0.4516, eval time: 544.9
+ 2023-12-11 at 16:17:35 | Training for epoch [6]
+ 2023-12-11 at 17:06:26 | Training statistics:	loss for epoch [6]: 2.807,	time: 2928.7, lr: 0.000050.
+ 2023-12-11 at 17:06:31 | Validating...
+ 2023-12-11 at 17:12:26 | Bleu_1:  0.6739
+ Bleu_4:  0.2505
+ Rouge_l:  0.4545
+ Meteor:  0.2233
+ Cider:  0.7485
+ Spice:  0.1773 
+ 2023-12-11 at 17:12:26 | Spider score :  0.4629, eval time: 354.9
+ 2023-12-11 at 17:12:44 | Training for epoch [7]
+ 2023-12-11 at 18:09:26 | Training statistics:	loss for epoch [7]: 2.717,	time: 3402.4, lr: 0.000031.
+ 2023-12-11 at 18:09:26 | Validating...
+ 2023-12-11 at 18:15:27 | Bleu_1:  0.6831
+ Bleu_4:  0.2542
+ Rouge_l:  0.4624
+ Meteor:  0.2276
+ Cider:  0.7500
+ Spice:  0.1769 
+ 2023-12-11 at 18:15:27 | Spider score :  0.4635, eval time: 361.3
+ 2023-12-11 at 18:15:44 | Training for epoch [8]
+ 2023-12-11 at 19:06:37 | Training statistics:	loss for epoch [8]: 2.648,	time: 3053.2, lr: 0.000015.
+ 2023-12-11 at 19:06:37 | Validating...
+ 2023-12-11 at 19:12:26 | Bleu_1:  0.6814
+ Bleu_4:  0.2537
+ Rouge_l:  0.4604
+ Meteor:  0.2269
+ Cider:  0.7550
+ Spice:  0.1769 
+ 2023-12-11 at 19:12:26 | Spider score :  0.4660, eval time: 349.0
+ 2023-12-11 at 19:12:44 | Training for epoch [9]
+ 2023-12-11 at 20:00:46 | Training statistics:	loss for epoch [9]: 2.606,	time: 2881.8, lr: 0.000004.
+ 2023-12-11 at 20:00:46 | Validating...
+ 2023-12-11 at 20:06:24 | Bleu_1:  0.6836
+ Bleu_4:  0.2559
+ Rouge_l:  0.4613
+ Meteor:  0.2271
+ Cider:  0.7638
+ Spice:  0.1788 
+ 2023-12-11 at 20:06:24 | Spider score :  0.4713, eval time: 337.8
+ 2023-12-11 at 20:06:47 | Training for epoch [10]
+ 2023-12-11 at 20:54:01 | Training statistics:	loss for epoch [10]: 2.586,	time: 2833.6, lr: 0.000000.
+ 2023-12-11 at 20:54:01 | Validating...
+ 2023-12-11 at 20:59:27 | Bleu_1:  0.6796
+ Bleu_4:  0.2523
+ Rouge_l:  0.4627
+ Meteor:  0.2278
+ Cider:  0.7653
+ Spice:  0.1783 
+ 2023-12-11 at 20:59:27 | Spider score :  0.4718, eval time: 326.2
+ 2023-12-11 at 20:59:31 | Training done. Start evaluating.
+ 2023-12-11 at 20:59:32 | Best checkpoint occurred in 10 th epoch.
+ 2023-12-11 at 21:05:30 | Bleu_1:  0.7040
+ Bleu_4:  0.2797
+ Rouge_l:  0.4827
+ Meteor:  0.2387
+ Cider:  0.8124
+ Spice:  0.1930 
+ 2023-12-11 at 21:05:30 | Spider score :  0.5027, eval time: 358.5
+ 2023-12-11 at 21:05:36 | Evaluation done.
